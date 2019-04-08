@@ -3,3 +3,33 @@
 /*may include some image effect in the background and following down page */
 /*I need a div for randomNumber, wins/lose, current total styled*/
 
+body {
+   background-color: plum; 
+}
+button {
+    background-color: plum;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+}
+
+#randomcapture {
+    background-color: darkmagenta;
+    width: 250px;
+    height: 250px;
+
+
+}
+#currenttotal {
+    border-style: dotted;
+    background-color: darkmagenta;
+    width: 250px;
+    height: 250px;
+}
+#tallydiv {
+    
+   
+}
+
