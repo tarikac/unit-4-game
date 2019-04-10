@@ -5,13 +5,29 @@ var randomCrystalOne; //random number generates on click
 var randomCrystalTwo; //random number generates on click
 var randomCrystalThree; //random number generates on click
 var randomCrystalFour; //random number generates on click
-var wins; //counter for winnings
-var losses; //counter for loses
-var total; //counter total for crystal picks
+var wins = 0; //counter for winnings
+var losses = 0; //counter for loses
+var total = 0; //counter total for crystal picks
 
 //dont think I need another counter for number of tries...
 
+$("#randomcapture h1").text(randomNumber);
+$("#currenttotal h1").text(total);
+$("#wins").text("Number of Wins: " + wins);
+$("#losses").text("Number of Losses: " + losses);
 
+$("#firstCrystal").on("click", function() {
+    total += randomCrystalOne;
+});
+$("#secondCrystal").on("click", function() {
+    total += randomCrystalTwo;
+});
+$("#firstCrystal").on("click", function() {
+    total += randomCrystalThree;
+});
+$("#firstCrystal").on("click", function() {
+    total += randomCrystalFour;
+});
 //set my variables
 //i neeed randomNumber picker
 //need to set random numbers for each button
