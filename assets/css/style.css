@@ -25,12 +25,13 @@ img {
     background-color: darkmagenta;
     width: 250px;
     height: 250px;
+    text-align: center;
     
 
 }
 #randomcapture p{
    font-size: 72px;
-   justify-content: center;
+   
    
 }
 #currenttotal {
@@ -38,6 +39,7 @@ img {
     background-color: darkmagenta;
     width: 250px;
     height: 250px;
+    text-align: center;
 }
 
 #currenttotal p {
