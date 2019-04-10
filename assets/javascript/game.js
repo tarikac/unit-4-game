@@ -16,8 +16,8 @@ console.log(randomCrystalTwo);
 console.log(randomCrystalThree);
 console.log(randomCrystalFour);
 
-$("#randomcapture").text(randomNumber).css("font-size", "40px");
-$("#currenttotal").text(total).css("font-size", "40px");
+$("#randomcapture").text(randomNumber).css("font-size", "48px");
+$("#currenttotal").text(total).css("font-size", "48px");
 $("#wins").text("Number of Wins: " + wins);
 $("#losses").text("Number of Losses: " + losses);
 
