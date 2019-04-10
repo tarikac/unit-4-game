@@ -10,6 +10,12 @@ button {
     background-color: plum;
 }
 
+button:hover {
+    background-color: darkmagenta;
+}
+button:focus {
+    background-color: darkmagenta;
+}
 img {
     width: 150px;
     height: 200px;
