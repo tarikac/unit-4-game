@@ -30,6 +30,8 @@ img {
 }
 #randomcapture p{
    font-size: 72px;
+   justify-content: center;
+   
 }
 #currenttotal {
     border-style: dotted;
