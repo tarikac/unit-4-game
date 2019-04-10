@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+// my document ready was not working. removed. 
 var randomNumber = Math.floor((Math.random() * 75) + 10); //random number generates
 var randomCrystalOne = Math.floor((Math.random() * 15) + 1); //random number generates on click
 var randomCrystalTwo = Math.floor((Math.random() * 15) + 1); //random number generates on click
@@ -11,8 +10,8 @@ var total = 0; //counter total for crystal picks
 
 //dont think I need another counter for number of tries...
 
-$("#randomcapture h1").text(randomNumber);
-$("#currenttotal h1").text(total);
+$("#randomcapture").text(randomNumber);
+$("#currenttotal").text(total);
 $("#wins").text("Number of Wins: " + wins);
 $("#losses").text("Number of Losses: " + losses);
 
@@ -78,5 +77,5 @@ randomCrystalFour = Math.floor((Math.random() * 15) + 1);
 
 
 
-});
+
 
