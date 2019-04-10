@@ -9,6 +9,12 @@ var losses = 0; //counter for loses
 var total = 0; //counter total for crystal picks
 
 //dont think I need another counter for number of tries...
+//console log to see if numbers are stored in variables.
+console.log(randomNumber);
+console.log(randomCrystalOne);
+console.log(randomCrystalTwo);
+console.log(randomCrystalThree);
+console.log(randomCrystalFour);
 
 $("#randomcapture").text(randomNumber);
 $("#currenttotal").text(total);
@@ -36,22 +42,27 @@ $("#firstCrystal").on("click", function() {
 if (total == randomNumber){
 prompt("You Won!")
 wins ++;
+$("#wins").text("Number of Wins: " + wins);
 reset();
 }
 
 if (total > randomNumber){
 prompt("Too high! You Lose!");
 losses ++;
+$("#losses").text("Number of Losses: " + losses);
 reset();
 }
 
 function reset(){
 total = 0;
+$("#currenttotal").text(total);
 randomNumber = Math.floor((Math.random() * 75) + 10);
+$("#randomcapture").text(randomNumber);
 randomCrystalOne = Math.floor((Math.random() * 15) + 1);
 randomCrystalTwo = Math.floor((Math.random() * 15) + 1);
 randomCrystalThree = Math.floor((Math.random() * 15) + 1);
 randomCrystalFour = Math.floor((Math.random() * 15) + 1);
+
 }
 
 //set my variables
