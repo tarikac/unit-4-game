@@ -30,11 +30,11 @@ $("#secondCrystal").on("click", function() {
     total += randomCrystalTwo;
     $("#currenttotal").text(total);
 });
-$("#firstCrystal").on("click", function() {
+$("#thirdCrystal").on("click", function() {
     total += randomCrystalThree;
     $("#currenttotal").text(total);
 });
-$("#firstCrystal").on("click", function() {
+$("#forthCrystal").on("click", function() {
     total += randomCrystalFour;
     $("#currenttotal").text(total);
 });
