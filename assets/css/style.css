@@ -25,16 +25,21 @@ img {
     background-color: darkmagenta;
     width: 250px;
     height: 250px;
-    font-size: large;
+    
 
-
+}
+#randomcapture p{
+   font-size: 48px;
 }
 #currenttotal {
     border-style: dotted;
     background-color: darkmagenta;
     width: 250px;
     height: 250px;
-    font-size: large;
+}
+
+#currenttotal p {
+font-size: 48px;
 }
 #tallydiv {
     
