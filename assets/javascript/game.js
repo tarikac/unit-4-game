@@ -1,4 +1,17 @@
 $(document).ready(function(){
+
+var randomNumber; //random number generates
+var randomCrystalOne; //random number generates on click
+var randomCrystalTwo; //random number generates on click
+var randomCrystalThree; //random number generates on click
+var randomCrystalFour; //random number generates on click
+var wins; //counter for winnings
+var losses; //counter for loses
+var total; //counter total for crystal picks
+
+//dont think I need another counter for number of tries...
+
+
 //set my variables
 //i neeed randomNumber picker
 //need to set random numbers for each button
