@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-var randomNumber; //random number generates
-var randomCrystalOne; //random number generates on click
-var randomCrystalTwo; //random number generates on click
-var randomCrystalThree; //random number generates on click
-var randomCrystalFour; //random number generates on click
+var randomNumber = Math.floor((Math.random() * 75) + 10); //random number generates
+var randomCrystalOne = Math.floor((Math.random() * 15) + 1); //random number generates on click
+var randomCrystalTwo = Math.floor((Math.random() * 15) + 1); //random number generates on click
+var randomCrystalThree = Math.floor((Math.random() * 15) + 1); //random number generates on click
+var randomCrystalFour = Math.floor((Math.random() * 15) + 1); //random number generates on click
 var wins = 0; //counter for winnings
 var losses = 0; //counter for loses
 var total = 0; //counter total for crystal picks
@@ -28,6 +28,28 @@ $("#firstCrystal").on("click", function() {
 $("#firstCrystal").on("click", function() {
     total += randomCrystalFour;
 });
+
+if (total == randomNumber){
+prompt("You Won!")
+wins ++;
+reset();
+}
+
+if (total > randomNumber){
+prompt("Too high! You Lose!");
+losses ++;
+reset();
+}
+
+function reset(){
+total = 0;
+randomNumber = Math.floor((Math.random() * 75) + 10);
+randomCrystalOne = Math.floor((Math.random() * 15) + 1);
+randomCrystalTwo = Math.floor((Math.random() * 15) + 1);
+randomCrystalThree = Math.floor((Math.random() * 15) + 1);
+randomCrystalFour = Math.floor((Math.random() * 15) + 1);
+}
+
 //set my variables
 //i neeed randomNumber picker
 //need to set random numbers for each button
