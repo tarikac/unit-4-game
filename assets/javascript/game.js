@@ -19,19 +19,19 @@ $("#losses").text("Number of Losses: " + losses);
 
 $("#firstCrystal").on("click", function() {
     total += randomCrystalOne;
-    $("#currenttotal h1").text(total);
+    $("#currenttotal").text(total);
 });
 $("#secondCrystal").on("click", function() {
     total += randomCrystalTwo;
-    $("#currenttotal h1").text(total);
+    $("#currenttotal").text(total);
 });
 $("#firstCrystal").on("click", function() {
     total += randomCrystalThree;
-    $("#currenttotal h1").text(total);
+    $("#currenttotal").text(total);
 });
 $("#firstCrystal").on("click", function() {
     total += randomCrystalFour;
-    $("#currenttotal h1").text(total);
+    $("#currenttotal").text(total);
 });
 
 if (total == randomNumber){
