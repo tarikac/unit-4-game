@@ -16,17 +16,22 @@ $("#currenttotal h1").text(total);
 $("#wins").text("Number of Wins: " + wins);
 $("#losses").text("Number of Losses: " + losses);
 
+
 $("#firstCrystal").on("click", function() {
     total += randomCrystalOne;
+    $("#currenttotal h1").text(total);
 });
 $("#secondCrystal").on("click", function() {
     total += randomCrystalTwo;
+    $("#currenttotal h1").text(total);
 });
 $("#firstCrystal").on("click", function() {
     total += randomCrystalThree;
+    $("#currenttotal h1").text(total);
 });
 $("#firstCrystal").on("click", function() {
     total += randomCrystalFour;
+    $("#currenttotal h1").text(total);
 });
 
 if (total == randomNumber){
