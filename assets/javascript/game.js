@@ -7,14 +7,14 @@ var randomCrystalFour = Math.floor((Math.random() * 15) + 1); //random number ge
 var wins = 0; //counter for winnings
 var losses = 0; //counter for loses
 var total = 0; //counter total for crystal picks
-
+var yourScore;
 //dont think I need another counter for number of tries...
 //console log to see if numbers are stored in variables.
-console.log(randomNumber);
-console.log(randomCrystalOne);
-console.log(randomCrystalTwo);
-console.log(randomCrystalThree);
-console.log(randomCrystalFour);
+console.log("Computer: " + randomNumber);
+console.log("Crystal One: " + randomCrystalOne);
+console.log("Crystal Two: " + randomCrystalTwo);
+console.log("Crystal Three: " + randomCrystalThree);
+console.log("Crystal Four: " + randomCrystalFour);
 
 $("#randomcapture > p").text(randomNumber);
 $("#currenttotal > p").text(total);
@@ -24,51 +24,62 @@ $("#losses").text("Number of Losses: " + losses);
 
 
 $("#firstCrystal").on("click", function() {
+    $("#results").text("");
     total += randomCrystalOne;
     $("#currenttotal > p").text(total);
-    console.log(total) 
+    console.log("Total: " + total) 
     findWinner();
 });
 $("#secondCrystal").on("click", function() {
+    $("#results").text("");
     total += randomCrystalTwo;
     $("#currenttotal > p").text(total);
-    console.log(total);
+    console.log("Total: " + total);
     findWinner();
 });
 $("#thirdCrystal").on("click", function() {
+    $("#results").text("");
     total += randomCrystalThree;
     $("#currenttotal > p").text(total);
-    console.log(total);
+    console.log("Total: " + total);
     findWinner();
 });
 $("#forthCrystal").on("click", function() {
+    $("#results").text("");
     total += randomCrystalFour;
     $("#currenttotal > p").text(total);
-    console.log(total);
+    console.log("Total: " + total);
     findWinner();
 });
 
+
+$("#resetGame").on("click", function(){
+    reset();
+})
+
 function findWinner() {
 if (total == randomNumber){
+    yourScore = total;
+    $("#results").text("Your Score: " + yourScore + " Yay! You won!");
     console.log("You Won!");
-    alert("You Won!");
     wins ++;
     $("#wins").text("Number of Wins: " + wins);
-    reset();
+    continuePlay();
 }
-    
+
 else if (total > randomNumber){
+    $("#results").text("Your Score: " + yourScore + " Too high! You Lose!");
     console.log("Too high! You Lose");
-    alert("Too high! You Lose!");
     losses ++;
     $("#losses").text("Number of Losses: " + losses);
-    reset();
-    }
+    continuePlay();
+}
+
 
 }
 
-function reset(){
-console.log("reset total"); 
+function continuePlay(){
+console.log("Reset Game"); 
 total = 0;
 $("#currenttotal > p").text(total);
 randomNumber = Math.floor((Math.random() * 75) + 15);
@@ -77,12 +88,38 @@ randomCrystalOne = Math.floor((Math.random() * 15) + 1);
 randomCrystalTwo = Math.floor((Math.random() * 15) + 1);
 randomCrystalThree = Math.floor((Math.random() * 15) + 1);
 randomCrystalFour = Math.floor((Math.random() * 15) + 1);
-console.log(randomNumber);
-console.log(randomCrystalOne);
-console.log(randomCrystalTwo);
-console.log(randomCrystalThree);
-console.log(randomCrystalFour);
+
+console.log("Computer: " + randomNumber);
+console.log("Crystal One: " + randomCrystalOne);
+console.log("Crystal Two: " + randomCrystalTwo);
+console.log("Crystal Three: " + randomCrystalThree);
+console.log("Crystal Four: " + randomCrystalFour);
 }
+
+function reset(){
+    console.log("Reset Game"); 
+    total = 0;
+    wins = 0;
+    losses= 0;
+    $("#results").text("");
+    $("#currenttotal > p").text(total);
+    randomNumber = Math.floor((Math.random() * 75) + 15);
+    $("#randomcapture > p").text(randomNumber);
+    randomCrystalOne = Math.floor((Math.random() * 15) + 1);
+    randomCrystalTwo = Math.floor((Math.random() * 15) + 1);
+    randomCrystalThree = Math.floor((Math.random() * 15) + 1);
+    randomCrystalFour = Math.floor((Math.random() * 15) + 1);
+    $("#wins").text("Number of Wins: " + wins);
+    $("#losses").text("Number of Losses: " + losses);
+    console.log("Computer: " + randomNumber);
+    console.log("Crystal One: " + randomCrystalOne);
+    console.log("Crystal Two: " + randomCrystalTwo);
+    console.log("Crystal Three: " + randomCrystalThree);
+    console.log("Crystal Four: " + randomCrystalFour);
+    console.log("Wins: " + wins);
+    console.log("Losses: " + wins) 
+    }
+    
 
 //set my variables
 //i neeed randomNumber picker
