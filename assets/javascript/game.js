@@ -1,5 +1,5 @@
 // my document ready was not working. removed. 
-var randomNumber = Math.floor((Math.random() * 75) + 10); //random number generates
+var randomNumber = Math.floor((Math.random() * 75) + 15); //random number generates
 var randomCrystalOne = Math.floor((Math.random() * 15) + 1); //random number generates on click
 var randomCrystalTwo = Math.floor((Math.random() * 15) + 1); //random number generates on click
 var randomCrystalThree = Math.floor((Math.random() * 15) + 1); //random number generates on click
@@ -22,47 +22,66 @@ $("#wins").text("Number of Wins: " + wins);
 $("#losses").text("Number of Losses: " + losses);
 
 
+
 $("#firstCrystal").on("click", function() {
     total += randomCrystalOne;
-    $("#currenttotal").text(total);
+    $("#currenttotal > p").text(total);
+    console.log(total) 
+    findWinner();
 });
 $("#secondCrystal").on("click", function() {
     total += randomCrystalTwo;
-    $("#currenttotal").text(total);
+    $("#currenttotal > p").text(total);
+    console.log(total);
+    findWinner();
 });
 $("#thirdCrystal").on("click", function() {
     total += randomCrystalThree;
-    $("#currenttotal").text(total);
+    $("#currenttotal > p").text(total);
+    console.log(total);
+    findWinner();
 });
 $("#forthCrystal").on("click", function() {
     total += randomCrystalFour;
-    $("#currenttotal").text(total);
+    $("#currenttotal > p").text(total);
+    console.log(total);
+    findWinner();
 });
 
+function findWinner() {
 if (total == randomNumber){
-prompt("You Won!")
-wins ++;
-$("#wins").text("Number of Wins: " + wins);
-reset();
+    console.log("You Won!");
+    alert("You Won!");
+    wins ++;
+    $("#wins").text("Number of Wins: " + wins);
+    reset();
 }
+    
+else if (total > randomNumber){
+    console.log("Too high! You Lose");
+    alert("Too high! You Lose!");
+    losses ++;
+    $("#losses").text("Number of Losses: " + losses);
+    reset();
+    }
 
-if (total > randomNumber){
-prompt("Too high! You Lose!");
-losses ++;
-$("#losses").text("Number of Losses: " + losses);
-reset();
 }
 
 function reset(){
+console.log("reset total"); 
 total = 0;
-$("#currenttotal").text(total);
-randomNumber = Math.floor((Math.random() * 75) + 10);
-$("#randomcapture").text(randomNumber);
+$("#currenttotal > p").text(total);
+randomNumber = Math.floor((Math.random() * 75) + 15);
+$("#randomcapture > p").text(randomNumber);
 randomCrystalOne = Math.floor((Math.random() * 15) + 1);
 randomCrystalTwo = Math.floor((Math.random() * 15) + 1);
 randomCrystalThree = Math.floor((Math.random() * 15) + 1);
 randomCrystalFour = Math.floor((Math.random() * 15) + 1);
-
+console.log(randomNumber);
+console.log(randomCrystalOne);
+console.log(randomCrystalTwo);
+console.log(randomCrystalThree);
+console.log(randomCrystalFour);
 }
 
 //set my variables
