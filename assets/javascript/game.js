@@ -75,11 +75,10 @@ else if (total > randomNumber){
     continuePlay();
 }
 
-
 }
 
 function continuePlay(){
-console.log("Reset Game"); 
+console.log("Continue Play"); 
 total = 0;
 $("#currenttotal > p").text(total);
 randomNumber = Math.floor((Math.random() * 75) + 15);
