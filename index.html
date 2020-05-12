@@ -4,31 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Game </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Crystal + Game </title>
+    <style>
+        .jumbotron-fluid{
+        background-image: url(assets/images/crystal_3.jpg);
+        background-size: cover;  
+        min-height: 300px;
+    }
+    </style>    
 </head>
 <body>
-<div id="container"><h1>Crystal Fine Text Decoration!</h1>
-    <div id="randomcapture"><p></p></div>
-    <div id="crystaldiv">
-    <!--resize to match similar size of crystal three -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <h2><i class="material-icons">stars</i>Crystal 
+                <i class="material-icons">add</i>
+                <i class="material-icons">stars</i>
+            </h2>
+        <hr class="my-4"> 
+    <div class="row">
+        <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus lacus, commodo gravida elit vel, 
+            faucibus tempor lectus. Vivamus efficitur massa vitae augue vehicula commodo. Sed feugiat nulla id felis 
+            lacinia dapibus. In blandit diam purus, quis posuere sem tincidunt id. Etiam sit amet sollicitudin lectus. 
+            Curabitur ac purus lacus. Mauris aliquam lobortis convallis. Suspendisse mattis massa orci, sed ultricies 
+            nisi mattis quis. Praesent egestas volutpat ullamcorper. Praesent bibendum lorem eget leo varius porttitor. 
+            Curabitur finibus pellentesque turpis, quis sollicitudin nisi luctus vel. Interdum et malesuada fames ac 
+            ante ipsum primis in faucibus. Mauris non facilisis erat, vitae facilisis felis. Sed eros augue, 
+            consequat viverra lectus non, porttitor convallis neque. Cras vel risus dapibus orci consequat tempus.</p>
+          </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+            <div id="randomcapture"><p></p></div> 
+            <div id="currenttotal"><p></p></div>
+
+            </div>
+        </div>   
+    <div class="row">
+        <div class="col-md-12">
+            <div>
     <button id="firstCrystal"><img src="assets/images/crystalone.png"></button>
     <button id="secondCrystal"><img src="assets/images/crystaltwo.png"></button>
     <button id="thirdCrystal"><img src="assets/images/crystalthree.png"></button>
     <button id="forthCrystal"><img src="assets/images/crystalfour.png"></button>
     </div>
-    <div id="currenttotal"><p></p></div>
-    <div id="tallydiv"> <h1 id="results"></h1> <h1 id="wins"></h1><h1 id="losses"></h1></div><!--//float left? where do i want this positioned?-->
+    </div>
+    </div>
+    <div id="tallydiv"> 
+        <h1 id="results"></h1> 
+        <h2 id="wins"></h2>
+        <h2 id="losses"></h2>
+    </div>
     <div id="gameResets">
         <button id="resetGame">Reset Game</button>
     </div>
-    
 </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/game.js"></script>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
             
 </body>
 </html>

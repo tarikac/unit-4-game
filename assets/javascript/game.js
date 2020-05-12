@@ -7,7 +7,7 @@ var randomCrystalFour = Math.floor((Math.random() * 15) + 1); //random number ge
 var wins = 0; //counter for winnings
 var losses = 0; //counter for loses
 var total = 0; //counter total for crystal picks
-var yourScore;
+var yourScore = 0;
 //dont think I need another counter for number of tries...
 //console log to see if numbers are stored in variables.
 console.log("Computer: " + randomNumber);
@@ -68,6 +68,7 @@ if (total == randomNumber){
 }
 
 else if (total > randomNumber){
+    yourScore = total;
     $("#results").text("Your Score: " + yourScore + " Too high! You Lose!");
     console.log("Too high! You Lose");
     losses ++;
