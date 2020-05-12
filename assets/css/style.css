@@ -4,6 +4,7 @@ body {
     background: rgb(49,143,223);
     background: linear-gradient(90deg, rgba(49,143,223,1) 0%, rgba(81,243,230,1) 28%, rgba(69,24,218,1) 59%, rgba(239,103,201,1) 100%);
  }
+ 
  button {
      background-color: #E965CA;
  }
@@ -11,13 +12,16 @@ body {
  button:hover {
      background-color: #8234D4;
  }
+
  button:focus {
      background-color: #8234D4;
  }
+
  img {
      width: 75px;
      height: 125px;
  }
+
  h2 {
      background-color: rgba(255, 255, 255, 0.1);
      color: white;
@@ -39,26 +43,25 @@ body {
  
  
  #randomcapture p{
-    font-size: 72px;
-    
-    
+    font-size: 72px;  
  }
+
  #currenttotal{
-    border-style: solid;
-    border-width: thin;
-    border-color: white;
-    color: white;
-    background-color: rgba(130, 52, 212, 0.6);
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    float: left;
-    margin-left: 50px;
-    margin-bottom: 30px;
+     border-style: solid;
+     border-width: thin;
+     border-color: white;
+     color: white;
+     background-color: rgba(130, 52, 212, 0.6);
+     width: 100px;
+     height: 100px;
+     text-align: center;
+     float: left;
+     margin-left: 50px;
+     margin-bottom: 30px;
  }
  
  #currenttotal p {
- font-size: 72px;
+     font-size: 72px;
  }
  
  #crystaldiv {
